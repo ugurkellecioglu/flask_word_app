@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{%block login%}
+<li class="nav-item active">
+                <a class="nav-link" href="{{url_for('logout')}}">Log out <span class="sr-only">(current)</span></a>
+              </li>
+ {%endblock%}
+{% block body%}
+
+    <input type="text" id="receiver"></input>
+    <input type="text" placeholder="message">
+    <input type="submit" placeholder="SENT">
+
+<script>
+      var id = localStorage.getItem("receiver_id");
+
+    document.getElementById('receiver').value = id;
+</script>
+{% endblock%}
+
